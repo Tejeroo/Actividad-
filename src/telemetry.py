@@ -10,7 +10,7 @@ class Telemetry:
 
 def authorize_operation(operation: str) -> bool:
     """Este consumidor únicamente puede solicitar lectura."""
-    return operation in ("read", "write")
+    return operation == "read"
 
 
 def validate_telemetry(payload: dict) -> Telemetry:
